@@ -1,0 +1,96 @@
+version: "2.0"
+
+intents:
+  - ask_greet
+#  - goodbye
+#  - affirm
+#  - deny
+#  - mood_great
+#  - mood_unhappy
+#  - bot_challenge
+#  - good_morning
+
+responses:
+#  utter_greet:
+#  - text: "Hey! How are you?"
+#
+#  utter_cheer_up:
+#  - text: "Here is something to cheer you up:"
+#    image: "https://i.imgur.com/nGF1K8f.jpg"
+#
+#  utter_did_that_help:
+#  - text: "Did that help you?"
+#
+#  utter_happy:
+#  - text: "Great, carry on!"
+#
+#  utter_goodbye:
+#  - text: "Bye"
+#
+#  utter_iamabot:
+#  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_greet_name:
+  - text: "Hi this is Lisa, ExoIS AI assistant. How can I help you today?"
+  - text: "Hey there, I'm Lisa your customer service AI assistant from ExoIS. How can I help you today?"
+  - text: "Hello there, My name is Lisa customer service AI assistant working for ExoIS. How can I help you today?"
+
+  utter_ask_name:
+    - text: "How do I call you?"
+    - text: "Can I have your name please?"
+    - text: "Please tell me your good name."
+
+  utter_ask_name_custom:
+    - custom:
+        blocks:
+        - template_id: "ask_name"
+        - slot_name: "customerName"
+        - expected_type: "text"
+        - validation_rules: "words_2||words_3,min_letters_2,safe_userName"
+
+  utter_how_to_help:
+    - text: "Hi $customerName, How can I help you today?"
+    - text: "Hey $customerName, At your service, tell me how can I help you?"
+    - text: "Hello $customerName, Need some help?"
+    - text: "Hi $customerName, Tell me what I can do."
+  utter_how_to_help_next:
+    - text: "Here are the few options to choose..."
+      buttons:
+        - title: "I have a sales-related inquiry"
+          payload: "1"
+        - title: " I'm an existing customer and need help"
+          payload: "2"
+        - title: " Not a current customer, but need help"
+          payload: "3"
+        - title: " I need a remote working solution"
+          payload: "4"
+        - title: " Another reason"
+          payload: "5"
+  utter_how_to_help_custom:
+    - custom:
+        blocks:
+          - template_id: "how_to_help"
+          - slot_name: "howToHelpOption"
+          - expected_values: "1,2,3,4,5,6"
+          - expected_type: "number"
+          - validation_rules: "is_number"
+  utter_how_to_help_custom_1:
+    - custom:
+        blocks:
+          - template_id: "utter_sales_inquiry_step_1"
+          - slot_name: "salesInquiryService"
+          - expected_values: "1,2,3,4,5"
+          - expected_type: "number"
+          - is_final: "N"
+          - validation_rules: "is_number, min_1_digits"
+
+
+
+actions:
+  - action_hello_world
+  - action_s_105_ask_greet_name
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,35 @@
+version: "2.0"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: good_morning
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: good_morning
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: action_hello_world
+#
+#- story: sad path 2
+#  steps:
+#  - intent: good_morning
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+- story: greet
+  steps:
+    - intent: ask_greet
+    - action: action_s_105_ask_greet_name
