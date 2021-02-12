@@ -1,0 +1,138 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: delivery_location
+  examples: |
+    - I would like the delivery at [home](delivery_location)
+    - I would like to have a delivery at [office](delivery_location)
+    - I would like a delivery to [Hyderabad](delivery_location)
+    - I would like a delivery to [Chennai](delivery_location)
+    - I would like a delivery to [Vizag](delivery_location)
+- intent: query
+  examples: |
+    - Do you deliver?
+    - Where do you deliver?
+    - Is delivery available?
+- intent: tell_name
+  examples: |
+    - What is your name?
+    - Tell me your name?
+    - What do people call you?
+    - what is your name?
+- intent: my_name
+  examples: |
+    - My name is [Ambati](name)
+    - My name is [Shiva](name)
+    - My name is [Suraj](name)
+    - My name is [Praneeth](name)
+    - My name is [Jagdeesh](name)
+    - [Ambati](name) is my name
+    - [Ambati]{"entity": "name", "value": "Amabti"} this side
+    - People recognise me as [Ambati](name)
+- intent: mobile_number
+  examples: |
+    - My number is [1234567890](number)
+    - [1234567890](number)
+    - [1234567890](number) is my number
+    - My mobile number is [1234567890](number)
+- intent: restaurant_name
+  examples: |
+    - I would like to order from [Paradise](restaurant_name)
+    - I would like to order from [Bawarchi](restaurant_name)
+    - I would like to order from [KFC](restaurant_name)
+    - I would like to order from [McDonald's]{"entity": "restaurant_name", "value": "Mcdonald's"}
+- intent: item_name
+  examples: |
+    - I would like to order [Mutton Biryani](item_name)
+    - I would like to order [Chicken Biryani](item_name)
+    - I would like to order [Chicken Burger](item_name)
+    - I would like to order [Chicken Popcorn](item_name)
+- synonym: Amabti
+  examples: |
+    - Ambati
+- synonym: Mcdonald's
+  examples: |
+    - McDonald's
