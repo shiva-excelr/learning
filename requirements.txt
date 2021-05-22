@@ -3,7 +3,7 @@ pandas
 autocorrect
 absl-py==0.10.0
 numpy
-# aio-pika==6.7.1
+aio-pika==6.7.1
 # aiofiles==0.6.0
 # aiohttp==3.6.3
 # aiormq==3.3.1
