@@ -16,9 +16,6 @@ nlu:
     - goodevening
     - good afternoon
     - shalom
-    - hola
-    - hallo
-    - ela unaru
 - intent: goodbye
   examples: |
     - good afternoon

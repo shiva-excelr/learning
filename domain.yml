@@ -1,0 +1,123 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- tell_name
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- delivery
+- query
+- my_name:
+    use_entities:
+    - name
+- mobile_number:
+    use_entities:
+    - number
+- delivery_location:
+    use_entities:
+    - delivery_location
+- restaurant_name:
+    use_entities:
+    - restaurant_name
+- item_name:
+    use_entities:
+    - item_name
+entities:
+- delivery_location
+- item_name
+- name
+- number
+- restaurant_name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  number:
+    type: text
+    influence_conversation: true
+  delivery_location:
+    type: text
+    influence_conversation: true
+  restaurant_name:
+    type: text
+    influence_conversation: true
+  item_name:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_happy_other:
+  - text: Delivery location?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: My name is Siri2.0
+  utter_delivery:
+  - text: Ok! your parcel will get delivered to your house
+  - text: Parcel will be delivered to your respective address
+  utter_delivered:
+  - text: Ok! your parcel will be delivered shortly! Thank you!
+  utter_ask_name:
+  - text: Hi!What is your name?
+  utter_ask_number:
+  - text: What is your mobile number?
+  utter_ask_delivery_location:
+  - text: Where do you want the item to get delivered?
+  utter_ask_restaurant_name:
+  - text: Which restaurant do you want order from?
+  utter_ask_item_name:
+  - text: What would like to order?
+  utter_thanks:
+  - text: Thanks for providing the values
+  utter_details_thanks:
+  - text: |-
+      Thanks for providing the details 
+      Name:{Name}, 
+      Mobile Number: {Mobile_number}, 
+      Delivery Location: {delivery_location}, 
+      Restaurant Name: {restaurant_name}, 
+      Item Name: {item_name}
+  utter_ask_wrong_number:
+  - text: Please enter a valid Mobile Number
+  utter_ask_wrong_number1:
+    - text: Please enter a valid Mobile Number1
+actions:
+- action_submit
+- utter_name
+- validate_user_details_form
+forms:
+  user_details_form:
+    name:
+    - type: from_entity
+      entity: name
+    number:
+    - type: from_entity
+      entity: number
+    delivery_location:
+    - type: from_entity
+      entity: delivery_location
+    restaurant_name:
+    - type: from_entity
+      entity: restaurant_name
+    item_name:
+    - type: from_entity
+      entity: item_name
