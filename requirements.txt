@@ -1,5 +1,6 @@
 rasa==2.4.3
 pandas
+autocorrect
 # absl-py==0.10.0
 # aio-pika==6.7.1
 # aiofiles==0.6.0
