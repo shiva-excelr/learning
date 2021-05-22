@@ -16,7 +16,7 @@ from rasa_sdk import Tracker, FormValidationAction
 from rasa_sdk.types import DomainDict
 import webbrowser
 
-class validateDeliveryForm(Action):
+class DeliveryForm(Action):
 
     def name(self) -> Text:
         return "user_details_form"

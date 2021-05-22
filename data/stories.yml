@@ -2,32 +2,7 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 
 - story: delivery
   steps:
@@ -36,6 +11,7 @@ stories:
   - action: user_details_form
   - active_loop: user_details_form
   - slot_was_set:
+    - name
     - number
     - delivery_location
     - restaurant_name
@@ -44,27 +20,7 @@ stories:
   - slot_was_set:
       - requested_slot: null
   - action: action_submit
-#
-#  - intent: my_name
-#    entities:
-#    - name: "Ambati"
-#  - slot_was_set:
-#      - name: "Ambati"
-#  - action: utter_mobile_number
-#  - intent: mobile_number
-#    entities:
-#    - number:  "12345678"
-#  - slot_was_set:
-#      - number: "12345678"
-#  - intent: query
-#  - action: utter_happy_other
-#  - intent: delivery
-#  - action: utter_delivery
-#  - intent: affirm
-#  - action: utter_delivered
-#  - action: utter_goodbye
-#
-#
+
 
 - story: interactive_story_1
   steps:
