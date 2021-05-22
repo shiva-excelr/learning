@@ -3033,6 +3033,3 @@ COUNTRY_CURRENCY_LIST = [
         "synonyms": []
     }
 ]
-
-pas= (get_country_code("Afghanistan"))
-print(pas)
