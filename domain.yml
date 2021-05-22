@@ -98,6 +98,8 @@ responses:
       Item Name: {item_name}
   utter_ask_wrong_number:
   - text: Please enter a valid Mobile Number
+  utter_ask_wrong_number1:
+    - text: Please enter a valid Mobile Number1
 actions:
 - action_submit
 - utter_name
