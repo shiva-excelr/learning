@@ -7,13 +7,13 @@ aio-pika==6.7.1
 aiofiles==0.6.0
 aiohttp==3.6.3
 aiormq==3.3.1
-# APScheduler==3.6.3
-# arrow==0.17.0
-# astor==0.8.1
-# astunparse==1.6.3
-# async-generator==1.10
-# async-timeout==3.0.1
-# asyncio-redis==0.16.0
+APScheduler==3.6.3
+arrow==0.17.0
+astor==0.8.1
+astunparse==1.6.3
+async-generator==1.10
+async-timeout==3.0.1
+asyncio-redis==0.16.0
 # attrs==20.2.0
 # Automat==20.2.0
 # blis==0.4.1
