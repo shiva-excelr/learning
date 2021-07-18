@@ -13,6 +13,8 @@ intents:
 - bot_challenge
 - delivery
 - query
+- hi
+- how are u
 - my_name:
     use_entities:
     - name
