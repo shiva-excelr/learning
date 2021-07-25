@@ -11,7 +11,9 @@ WORKDIR /app
 # ADD ./actions /app/actions/
 # ADD ./scripts /app/scripts/
 RUN pip install -r requirements.txt
-# RUN pip uninstall tensorflow
+RUN echo "AA"
+RUN pip uninstall tensorflow
+RUN echo "bb"
 COPY . /app
 
 EXPOSE 5000
