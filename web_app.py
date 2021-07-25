@@ -88,8 +88,8 @@ def index():
       if request.method == 'GET':
         val = str(request.args.get('text'))
         print(val)
-        if val =="None":
-          val ="bye"
+        # if val =="None":
+        #   val ="bye"
         data = json.dumps({"sender": "Rasa","message": val})
         print(data)
         headers = {'Content-type': 'application/json'}
