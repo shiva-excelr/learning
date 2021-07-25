@@ -1,6 +1,7 @@
 #python==3.8
 #rasa==2.4.3
 rasa==2.2.8
+rasa==2.0.0
 #streamlit
 #gunicron
 # attrs==20.2.0
