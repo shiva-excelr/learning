@@ -1,6 +1,6 @@
 #python==3.8
 rasa==2.4.3
-streamlit
+#streamlit
 #gunicron
 # attrs==20.2.0
 # Automat==20.2.0
