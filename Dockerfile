@@ -9,8 +9,8 @@ WORKDIR /app
 # ADD ./models /app/models/
 # ADD ./actions /app/actions/
 # ADD ./scripts /app/scripts/
-RUN pip install -r requirements.txt
-RUN pip uninstall tensorflow
+# RUN pip install -r requirements.txt
+# RUN pip uninstall tensorflow
 COPY . /app
 
 EXPOSE 5005
