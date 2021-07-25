@@ -13,7 +13,7 @@ WORKDIR /app
 # RUN pip uninstall tensorflow
 COPY . /app
 
-EXPOSE 5005
+EXPOSE 5000
 ENTRYPOINT []
 
 CMD [ "web_app.py" ]
