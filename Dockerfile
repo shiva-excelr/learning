@@ -1,8 +1,7 @@
-FROM ubuntu:latest
-
-FROM python:3.8.11
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+# FROM ubuntu:latest
+FROM rasa/rasa:2.8.0
+# RUN apt-get update -y && \
+#     apt-get install -y python-pip python-dev
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -14,7 +13,7 @@ RUN pip install -r requirements.txt
 RUN pip uninstall tensorflow
 COPY . /app
 
-EXPOSE 5000
+EXPOSE 5005
 ENTRYPOINT []
 
 CMD [ "web_app.py" ]
